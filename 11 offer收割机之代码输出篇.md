@@ -22,14 +22,18 @@ promise.then(() => {
 });
 console.log(4);
 ```
+<details>
 
-输出结果如下：
+<summary>查看结果</summary>
 
-```
-1 
-2 
+```vue
+1
+2
 4
 ```
+
+</details>
+
 
 promise.then 是微任务，它会在所有的宏任务执行完之后才会执行，同时需要promise内部的状态发生变化，因为这里内部没有发生变化，一直处于pending状态，所以不输出3。
 
